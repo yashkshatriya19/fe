@@ -1,0 +1,15 @@
+*{
+    font-style: italic;
+}
+p{
+    color: brown;
+}
+.myClass{
+    text-decoration: underline;
+}
+#myId{
+    font-family: 'Courier New', Courier, monospace;
+}.myClass#m
+pyId{
+    color: aqua;
+}

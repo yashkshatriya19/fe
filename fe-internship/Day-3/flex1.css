@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 500px;
+}
+
+.card {
+  background-color: aqua;
+  padding: 20px;
+  flex: 1 1 200px;
+}
+
+.card1 {
+  flex-grow: 2;
+}
+
+.card2 {
+  flex-shrink: 0;
+}
+
+.card3 {
+  align-self: flex-start;
+}
+
+.card4 {
+  order: -1;
+}

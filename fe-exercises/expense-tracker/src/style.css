@@ -1,0 +1,247 @@
+/* =========================
+   Base
+========================= */
+
+:root {
+    --teal: #2389a6;
+    --slate: #91a0ae;
+    --rose: #d9b0b5;
+    --coral: #ff9999;
+    --pink: #f56780;
+
+    --background: #f8f5f4;
+    --white: #ffffff;
+    --text: #263238;
+    --muted: #6b747b;
+    --border: #d9dfe2;
+    --error: #d94b5b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   Main sections
+========================= */
+
+.transaction-form,
+.transaction-list {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   Form
+========================= */
+
+.transaction-form {
+    padding: 30px;
+}
+
+.transaction-form h1,
+.transaction-list h1 {
+    margin: 0 0 25px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.transaction-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+}
+
+.transaction-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus,
+.transaction-form textarea:focus {
+    border-color: var(--teal);
+}
+
+.transaction-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* Error messages */
+
+.error {
+    min-height: 18px;
+    margin: 4px 0 8px;
+    color: var(--error);
+    font-size: 13px;
+}
+
+/* Submit button */
+
+.transaction-form button[type="submit"] {
+    grid-column: 1 / -1;
+    width: fit-content;
+    margin-top: 8px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.transaction-form button[type="submit"]:hover {
+    background: #1d7790;
+}
+
+/* =========================
+   Transaction table
+========================= */
+
+.transaction-list {
+    padding: 30px;
+    overflow-x: auto;
+}
+
+.transaction-list table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.transaction-list th,
+.transaction-list td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 14px;
+}
+
+.transaction-list th {
+    background: var(--teal);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.transaction-list tbody tr:hover {
+    background: #faf5f5;
+}
+
+.transaction-list tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   Type column
+========================= */
+
+.transaction-list td:nth-child(3) {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.transaction-list td:nth-child(3) {
+    color: var(--slate);
+}
+
+.transaction-list td:nth-child(6) {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================
+   Action buttons
+========================= */
+
+.transaction-list td:last-child {
+    white-space: nowrap;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 7px 11px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: var(--rose);
+    color: var(--text);
+}
+
+.edit-btn:hover {
+    background: #cfa4aa;
+}
+
+.delete-btn {
+    background: var(--pink);
+    color: var(--white);
+    margin-left: 6px;
+}
+
+.delete-btn:hover {
+    background: #e6546d;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    .transaction-form,
+    .transaction-list {
+        padding: 20px;
+    }
+
+    .transaction-form form {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .transaction-form button[type="submit"] {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .transaction-form h1,
+    .transaction-list h1 {
+        font-size: 24px;
+    }
+}

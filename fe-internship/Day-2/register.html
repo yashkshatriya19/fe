@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Registration form (name, email, password, gender, country, terms) with native validation and labels">
+    <meta name="author" content="Yash Kshatriya">
+    <title>Registration Form</title>
+</head>
+<body>
+    <main>
+        <form>
+
+            <label for="name" name="name">Name :</label>
+            <input type="text" id="name" placeholder="Enter Name" required>
+            
+            <br><br>
+            
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email" required>
+            
+            <br><br>
+            
+            <label for="address">Enter address : </label>
+            
+            <textarea name="address" id="address" placeholder="Enter address"></textarea>
+            
+            <br><br>
+
+            <label>Select Gender : </label>
+            <input type="radio" name="gen" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gen" id="female" value="female">
+            <label for="female">Female</label>
+            
+            <br><br>
+
+            <label for="con">Country : </label>
+            <select name="con" id="con" required>
+                <option value="default" selected disabled>Select Country</option>
+                <option value="ind">India</option>
+                <option value="jap">Japan</option>
+                <option value="rus">Russia</option>
+                <option value="koe">Korea</option>
+            </select>
+            
+            <br><br>
+            
+            <label for="pass">Password :</label>
+            <input type="password" id="pass" placeholder="Enter Password" required>
+            
+            <br><br>
+            
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">I accept the <a href="/" target="_blank">Terms and Conditions</a> and <a href="/" target="_blank">Privacy Policy</a></label>
+
+            <br><br>
+        
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </main>
+</body>
+</html>

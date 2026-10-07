@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef5f7;
+    color: #304b5a;
+    padding: 40px;
+}
+
+/* Main Heading */
+
+h1 {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #304b5a;
+}
+
+/* Form */
+
+.form {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    padding: 30px 35px;
+    border: 1px solid #d7e3e7;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(48, 75, 90, 0.07);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3f5d6c;
+}
+
+.form input,
+.form select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #c5d6dc;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #304b5a;
+    font-size: 14px;
+    outline: none;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: #719baa;
+    box-shadow: 0 0 0 2px rgba(113, 155, 170, 0.12);
+}
+
+.form p.error {
+    min-height: 18px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    color: #a05252;
+    font-size: 12px;
+}
+
+/* Submit Button */
+
+.form input[type="submit"] {
+    width: 160px;
+    height: 42px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    background: #3f6273;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.form input[type="submit"]:hover {
+    background: #304b5a;
+}
+
+/* Employee List */
+
+#employeeList {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px 35px;
+    border: 1px solid #d7e3e7;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(48, 75, 90, 0.07);
+}
+
+#employeeList h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #304b5a;
+}
+
+/* Search and Filters */
+
+#search {
+    width: 45%;
+    height: 40px;
+    padding: 0 12px;
+    margin-right: 10px;
+    border: 1px solid #c5d6dc;
+    border-radius: 5px;
+    outline: none;
+    color: #304b5a;
+}
+
+#departmentFilter,
+#ratingFilter,
+#sortFilter {
+    height: 40px;
+    padding: 0 12px;
+    margin-right: 8px;
+    border: 1px solid #c5d6dc;
+    border-radius: 5px;
+    background: white;
+    color: #304b5a;
+    outline: none;
+}
+
+#search:focus,
+#departmentFilter:focus,
+#ratingFilter:focus,
+#sortFilter:focus {
+    border-color: #719baa;
+}
+
+/* Table */
+
+#employeesTable {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#employeesTable thead {
+    background: #3f6273;
+    color: white;
+}
+
+#employeesTable th {
+    padding: 13px 12px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#employeesTable td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e0e8eb;
+    color: #435d69;
+}
+
+#employeesTable tbody tr:hover {
+    background: #f5f8f9;
+}
+
+#employeesTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action Buttons */
+
+.edit-btn,
+.delete-btn,
+.info-btn {
+    padding: 6px 10px;
+    margin-right: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    background: white;
+}
+
+.edit-btn {
+    border: 1px solid #719baa;
+    color: #527b8a;
+}
+
+.edit-btn:hover {
+    background: #edf5f7;
+}
+
+.delete-btn {
+    border: 1px solid #b47b7b;
+    color: #9a5d5d;
+}
+
+.delete-btn:hover {
+    background: #faf0f0;
+}
+
+.info-btn {
+    border: 1px solid #9586b3;
+    color: #766597;
+}
+
+.info-btn:hover {
+    background: #f4f0fa;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    #employeeList {
+        padding: 25px;
+        overflow-x: auto;
+    }
+
+    #search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+     
+    #departmentFilter,
+    #ratingFilter
+    , #sortFilter {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+
+    #employeesTable {
+        min-width: 850px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    .form,
+    #employeeList {
+        padding: 20px;
+    }
+
+    #departmentFilter,
+    #ratingFilter,
+    #sortFilter
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+}
